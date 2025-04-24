@@ -1,0 +1,10 @@
+%Error: Cannot find file containing module: /openlane/designs/twos_complement/src/twos_complement.v
+%Error: This may be because there's no search path specified with -I<dir>.
+        ... Looked in:
+             /openlane/designs/twos_complement/src/twos_complement.v
+             /openlane/designs/twos_complement/src/twos_complement.v.v
+             /openlane/designs/twos_complement/src/twos_complement.v.sv
+             obj_dir//openlane/designs/twos_complement/src/twos_complement.v
+             obj_dir//openlane/designs/twos_complement/src/twos_complement.v.v
+             obj_dir//openlane/designs/twos_complement/src/twos_complement.v.sv
+%Error: Exiting due to 2 error(s)

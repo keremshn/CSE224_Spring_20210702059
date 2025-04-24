@@ -1,0 +1,30 @@
+Thu Apr 24 23:34:09 +0000 2025 - Executing "{openroad -exit -no_init -python /openlane/scripts/odbpy/lefutil.py get_metal_layers -o /openlane/designs/twos_complement/runs/RUN_2025.04.24_23.34.09/tmp/layers.list /Users/macpro/.volare/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef}"
+
+Thu Apr 24 23:34:09 +0000 2025 - Executing "{/openlane/scripts/mergeLef.py -o /openlane/designs/twos_complement/runs/RUN_2025.04.24_23.34.09/tmp/merged.nom.lef -i /Users/macpro/.volare/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef {/Users/macpro/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef /Users/macpro/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef} |& tee /dev/null}"
+
+Thu Apr 24 23:34:09 +0000 2025 - Executing "{/openlane/scripts/mergeLef.py -o /openlane/designs/twos_complement/runs/RUN_2025.04.24_23.34.09/tmp/merged.min.lef -i /Users/macpro/.volare/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__min.tlef {/Users/macpro/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef /Users/macpro/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef} |& tee /dev/null}"
+
+Thu Apr 24 23:34:09 +0000 2025 - Executing "{/openlane/scripts/mergeLef.py -o /openlane/designs/twos_complement/runs/RUN_2025.04.24_23.34.09/tmp/merged.max.lef -i /Users/macpro/.volare/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__max.tlef {/Users/macpro/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef /Users/macpro/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef} |& tee /dev/null}"
+
+Thu Apr 24 23:34:09 +0000 2025 - Executing "{python3 /openlane/scripts/mergeLib.py --output /openlane/designs/twos_complement/runs/RUN_2025.04.24_23.34.09/tmp/synthesis/merged.lib --name sky130A_merged /Users/macpro/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib}"
+
+Thu Apr 24 23:34:10 +0000 2025 - Executing "{python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/twos_complement/runs/RUN_2025.04.24_23.34.09/tmp/synthesis/trimmed.lib.exclude.list --output /openlane/designs/twos_complement/runs/RUN_2025.04.24_23.34.09/tmp/synthesis/trimmed.lib /openlane/designs/twos_complement/runs/RUN_2025.04.24_23.34.09/tmp/synthesis/merged.lib}"
+
+Thu Apr 24 23:34:10 +0000 2025 - Executing "{python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/twos_complement/runs/RUN_2025.04.24_23.34.09/tmp/cts/cts.lib.exclude.list --output /openlane/designs/twos_complement/runs/RUN_2025.04.24_23.34.09/tmp/cts/cts.lib /Users/macpro/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib}"
+
+Thu Apr 24 23:34:10 +0000 2025 - Executing "{python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/twos_complement/runs/RUN_2025.04.24_23.34.09/tmp/cts/cts-fastest.lib.exclude.list --output /openlane/designs/twos_complement/runs/RUN_2025.04.24_23.34.09/tmp/cts/cts-fastest.lib /Users/macpro/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib}"
+
+Thu Apr 24 23:34:11 +0000 2025 - Executing "{python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/twos_complement/runs/RUN_2025.04.24_23.34.09/tmp/cts/cts-slowest.lib.exclude.list --output /openlane/designs/twos_complement/runs/RUN_2025.04.24_23.34.09/tmp/cts/cts-slowest.lib /Users/macpro/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib}"
+
+Thu Apr 24 23:34:11 +0000 2025 - Executing "{python3 /openlane/scripts/new_tracks.py -i /Users/macpro/.volare/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tracks.info -o /openlane/designs/twos_complement/runs/RUN_2025.04.24_23.34.09/tmp/routing/config.tracks}"
+
+Thu Apr 24 23:34:11 +0000 2025 - Executing "{echo {OpenLane e73fb3c57e687a0023fcd4dcfd1566ecd478362a} > /openlane/designs/twos_complement/runs/RUN_2025.04.24_23.34.09/OPENLANE_COMMIT}"
+
+Thu Apr 24 23:34:11 +0000 2025 - Executing "{yosys -c /openlane/scripts/yosys/blackbox.tcl}"
+
+Thu Apr 24 23:34:11 +0000 2025 - Executing "{verilator -Wall --lint-only --Wno-DECLFILENAME --top-module twos_complement /openlane/designs/twos_complement/runs/RUN_2025.04.24_23.34.09/tmp/synthesis/blackbox/sky130_fd_sc_hd__blackbox.v /openlane/designs/twos_complement/src/twos_complement.v -Wno-fatal --relative-includes |& tee /openlane/designs/twos_complement/runs/RUN_2025.04.24_23.34.09/logs/synthesis/linter.log /dev/null}"
+
+Thu Apr 24 23:34:11 +0000 2025 - Executing "{python3 /openlane/scripts/write_runtime.py --conclude --seconds --time-in 1745537651 {flow failed}}"
+
+Thu Apr 24 23:34:11 +0000 2025 - Executing "{python3 /openlane/scripts/generate_reports.py -d /openlane/designs/twos_complement --design_name twos_complement --tag RUN_2025.04.24_23.34.09 --output_file /openlane/designs/twos_complement/runs/RUN_2025.04.24_23.34.09/reports/metrics.csv --man_report /openlane/designs/twos_complement/runs/RUN_2025.04.24_23.34.09/reports/manufacturability.rpt --run_path /openlane/designs/twos_complement/runs/RUN_2025.04.24_23.34.09}"
+
